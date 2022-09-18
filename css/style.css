@@ -27,6 +27,10 @@ p{
     color: black;
     text-align: center;
 }
+.dieta{
+    color: black;
+    text-align: center;
+}
 .logo{
 				width: 80px;
 				margin-bottom: 12px;
@@ -41,6 +45,42 @@ p{
     background-color: #F3F3F3;
     transition: 1s;
     display: none;
+}
+.container2{
+    margin-top: 10px;
+    width: 500px;
+    height: 400px;
+    border: .5px solid #2d2d2d;
+    border-radius: 20px;
+	line-height: 30px;
+    background-color: #F3F3F3;
+    transition: 1s;
+    display: none;
+}
+#exemplo{
+    color: black;
+    text-align: center;
+    font-size: 12pt;
+    font-style: italic;
+    text-decoration: underline;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.btn{
+    border-radius: 10px;
+    text-align: center;
+    height: 20px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif  ;
+}
+.titulo{
+    color: black;
+    text-align: center;
+    font-size: 10pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 ul{
     margin-top: 0%;

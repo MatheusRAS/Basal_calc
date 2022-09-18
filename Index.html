@@ -13,7 +13,7 @@
         <ul>
             <li><a href="https://www.instagram.com/mmimportados.ofc">Instagram</a></li>
             <li><a href="https://www.fb.com/mm.importados.sp">Facebook</a></li>
-            <li><a href="https://api.whatsapp.com/send?phone=&text=Ol%C3%A1%2C%20vim%20pelo%20site">WhatsApp</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=5543991644788&text=Ol%C3%A1%2C%20vim%20pelo%20site">WhatsApp</a></li>
         </ul>    
     </nav>
 <img class="logo" src="img/logobg.png" alt="Logo mmimportados"/>
@@ -25,12 +25,12 @@
 
         </select>
         <p>Peso</p>
-        <input class="input" type="number" name="peso" id="peso" placeholder="60Kg">
+        <input class="input" type="number" name="peso" id="peso" placeholder="60Kg" required>
         <p>Idade</p>
-        <input class="input" type="number" name="Idade" id="idade" placeholder="20 anos">
+        <input class="input" type="number" name="Idade" id="idade" placeholder="20 anos" required>
         <p>Altura em centimentros</p>
-        <input class="input" type="number" name="altura" id="altura" placeholder="105cm">
-        <input class="input" type="submit" id="submit" value="Enviar" onclick="mostrar()">
+        <input class="input" type="number" name="altura" id="altura" placeholder="105cm" required>
+        <input class="btn" type="submit" id="submit" value="Enviar" onclick="mostrar()">
     <div class="container">
         <div class="box"></div>
         <p class="result" id="basal"></p>
@@ -39,6 +39,32 @@
         <p class="result" id="proteina"></p>
         <p class="result" id="carbo"></p>
         <p class="result" id="gordura"></p>
+        
+    </div>
+    <div class="container2">
+        <p id="exemplo"> Exemplo de dieta</p>
+        <p class="titulo">Refeição 1</p>
+        <p class="dieta" id="pref1"></p>
+        <p class="dieta" id="cref1"></p>
+       
+        
+        <p class="titulo">Refeição 2</p>
+        <p class="dieta" id="pref2"></p>
+        <p class="dieta" id="cref2"></p>
+        
+
+        <p class="titulo">Refeição 3</p>
+        <p class="dieta" id="pref3"></p>
+        <p class="dieta" id="cref3"></p>
+       
+
+        <p class="titulo">Refeição 4</p>
+        <p class="dieta" id="pref4"></p>
+        <p class="dieta" id="cref4"></p>
+        
+
+        
+
     </div>
     </form>
     
