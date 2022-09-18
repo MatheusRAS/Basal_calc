@@ -66,6 +66,24 @@ p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
 }
+#imc{
+    display: none;
+    padding-top: 10px;
+}
+#imc_alto{
+    display: none;
+    padding-top: 10px;
+    background-color: rgba(255, 0, 0, 0.534);
+    color: white;
+    border-radius: 10px;
+
+}
+#tab_imc{
+    width: 300px;
+	margin-bottom: 12px;
+    padding-left: 10px;
+    display: none;
+}
 .btn{
     border-radius: 10px;
     text-align: center;

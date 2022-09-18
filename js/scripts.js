@@ -1,9 +1,12 @@
+
 const btn = document.querySelector("#submit");
 
 //Funçao para aparecer box em volta do result
 function mostrar(){
     document.getElementsByClassName('container')[0].style.display="block";
     document.getElementsByClassName('container2')[0].style.display="block";
+    document.getElementsByClassName('info')[0].style.display="block";
+    document.getElementsByClassName('tab')[0].style.display="block";
 }
      //evento para receber dados   
 btn.addEventListener("click", function(e){
@@ -28,6 +31,8 @@ btn.addEventListener("click", function(e){
     const alturaint = parseInt(alturav);
     const alturac = 5 * alturaint;
 
+    const IMC2 = (alturaint/100) * (alturaint/100);
+    const IMC = pesoint / IMC2;
     const conta = 66 + pesoc + alturac - idadec;
     const emagrecer = conta - 500
 
@@ -47,7 +52,7 @@ btn.addEventListener("click", function(e){
         //proteina
     const ovo = proteina_ref / 6.26; //Un
     const frango = proteina_ref / 0.31; //1g
-
+    const patinho = proteina_ref / 0.4; //1g
     //carbo
     const arroz = carbo_ref / 0.28; //1g
     const batata = carbo_ref / 0.24; //1g
@@ -61,19 +66,22 @@ btn.addEventListener("click", function(e){
     document.getElementById("carbo").innerHTML = 'Carboidratos: ' + parseInt(carbo)  + 'g'
     document.getElementById("gordura").innerHTML = 'Gordura: ' + parseInt(gordura) + 'g'
 
+        //REFEIÇÕES
+    document.getElementById("pref1").innerHTML = 'Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido/assado.';
+    document.getElementById("cref1").innerHTML = 'Pão integral: ' + parseInt(pao) + ' fatia(s) ou ' + parseInt(batata) + 'g de batata doce cozida';
 
-    document.getElementById("pref1").innerHTML = 'Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido ou assado.';
-    document.getElementById("cref1").innerHTML = 'Pão integral' + parseInt(pao) + ' fatia(s) ou ' + parseInt(batata) + 'g de batata doce';
-
-    document.getElementById("pref2").innerHTML ='Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido ou assado.'; 
+    document.getElementById("pref2").innerHTML ='Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido/assado ou ' + parseInt(patinho) + 'g patinho grelhado'; 
     document.getElementById("cref2").innerHTML = 'Arroz Branco cozido: ' + parseInt(arroz) + 'g ou ' + parseInt(arrozint) + 'g de Arroz Integral cozido';
     
-    document.getElementById("pref3").innerHTML = 'Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido ou assado.';
+    document.getElementById("pref3").innerHTML = 'Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido/assado ou ' + parseInt(patinho)+ 'g patinho grelhado';
     document.getElementById("cref3").innerHTML = 'Arroz Branco cozido: ' + parseInt(arroz) + 'g ou ' + parseInt(batata) + 'g de batata doce cozida' ;
 
-    document.getElementById("pref4").innerHTML = 'Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido ou assado.';
-    document.getElementById("cref4").innerHTML = 'Pão integral: ' + parseInt(pao) + 'fatias ou ' + parseInt(batata) + 'g de batata doce cozida' ;
+    document.getElementById("pref4").innerHTML = 'Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido/assado.';
+    document.getElementById("cref4").innerHTML = 'Pão integral: ' + parseInt(pao) + ' fatia(s) ou ' + parseInt(batata) + 'g de batata doce cozida' ;
     
+    //Declaração IMC
+    document.getElementById("imc").innerHTML = "Seu IMC é:" + parseInt(IMC);
+
     
     }
     if(sexov == "mulher"){
@@ -91,6 +99,9 @@ btn.addEventListener("click", function(e){
         const alturav = altura.value;
         const alturaint = parseInt(alturav);
         const alturac = 1.8 * alturaint;
+
+        const IMC2 = (alturaint/100) * (alturaint/100);
+        const IMC = pesoint / IMC2;
         //calculo basal
     const conta = 655 + pesoc + alturac - idadec;
         //calculo emagrecer
@@ -111,7 +122,7 @@ btn.addEventListener("click", function(e){
         //proteina
     const ovo = proteina_ref / 6.26; //Un
     const frango = proteina_ref / 0.31; //1g
-
+    const patinho = proteina_ref / 0.4; //1g
     //carbo
     const arroz = carbo_ref / 0.28; //1g
     const batata = carbo_ref / 0.24; //1g
@@ -126,20 +137,22 @@ btn.addEventListener("click", function(e){
     document.getElementById("carbo").innerHTML = 'Carboidratos: ' + parseInt(carbo)  + 'g';
     document.getElementById("gordura").innerHTML = 'Gordura: ' + parseInt(gordura) + 'g';
        
-    
-    document.getElementById("pref1").innerHTML = 'Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido ou assado.';
-    document.getElementById("cref1").innerHTML = 'Pão integral' + parseInt(pao) + ' fatia(s) ou ' + parseInt(batata) + 'g de batata doce';
+    //REFEIÇÕES
+    document.getElementById("pref1").innerHTML = 'Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido/assado';
+    document.getElementById("cref1").innerHTML = 'Pão integral: ' + parseInt(pao) + ' fatia(s) ou ' + parseInt(batata) + 'g de batata doce cozida';
 
-    document.getElementById("pref2").innerHTML ='Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido ou assado.'; 
+    document.getElementById("pref2").innerHTML ='Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido/assado ou ' +parseInt( patinho) + 'g patinho grelhado'; 
     document.getElementById("cref2").innerHTML = 'Arroz Branco cozido: ' + parseInt(arroz) + 'g ou ' + parseInt(arrozint) + 'g de Arroz Integral cozido';
     
-    document.getElementById("pref3").innerHTML = 'Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido ou assado.';
+    document.getElementById("pref3").innerHTML = 'Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido/assado ou ' + parseInt(patinho)+ 'g patinho grelhado';
     document.getElementById("cref3").innerHTML = 'Arroz Branco cozido: ' + parseInt(arroz) + 'g ou ' + parseInt(batata) + 'g de batata doce cozida' ;
 
     document.getElementById("pref4").innerHTML = 'Ovo cozido Grande: ' + parseInt(ovo) + 'UN ou ' + parseInt(frango) + 'g de Frango cozido ou assado.';
-    document.getElementById("cref4").innerHTML = 'Pão integral: ' + parseInt(pao) + 'fatias ou ' + parseInt(batata) + 'g de batata doce cozida' ;
-    
-
+    document.getElementById("cref4").innerHTML = 'Pão integral: ' + parseInt(pao) + ' fatia(s) ou ' + parseInt(batata) + 'g de batata doce cozida' ;
+    //Declaração IMC
+    document.getElementById("imc").innerHTML = "Seu IMC é:" + parseInt(IMC);
+    //IMC ALTO
+   
 }
 
 })
